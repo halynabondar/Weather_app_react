@@ -1,6 +1,7 @@
 {
   "name": "week5",
   "version": "0.1.0",
+  "homepage": "https://halynabondar.github.io/Weather_app_react/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -12,15 +13,16 @@
     "react-animated-weather": "^4.0.1",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "gh-pages": "^6.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "rimraf /build npm run build && mkdir -p release && cp -r build/* release/",
-    "deploy": "git add release/* && git commit -m 'Deploying to GithubPages' && git push"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
