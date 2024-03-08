@@ -18,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "rimraf /build npm run build && mkdir -p release && cp -r build/* release/",
+    "deploy": "git add release/* && git commit -m 'Deploying to GithubPages' && git push"
   },
   "eslintConfig": {
     "extends": [
